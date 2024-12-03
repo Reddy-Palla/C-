@@ -1,1 +1,108 @@
+C++
+------------
+-> c++ is an extension and implementation of new features in c language
+-> It is object-oriented programming language. because it organizes code into objects, which are modules that contains code and functions .
+
+Object- Oriented programming:
+-----------------------
+It is a methodology that helps to organize complex programs through the use of Inheritance, Encapsulation & polymorphism.
+
+Compile-time
+------------
+It is the period when the programming code is converted in to  the machine code.
+
+
+Run-time
+------
+It is the period of time when a program is running and generally occurs after compile time.
+ 
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+Class:  It is a blueprint that defines the variables and methods.  
+
+Object: It is instance (or) physical existance of a class (or ) real world entity of a class.
+
+Member functions : functions inside the class are called as member functions.
+
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+
+         c                                          c++
+      --------                                    --------
+ 1) Procedual oriented                        1) Object oriented
+ 2) Data is secured                           2) Secured
+ 3) Access specifiers are not present         3) are present
+ 4)not strict type check                      4)  strict type check
+ 5) function driven                           5) object driven
+ 6)Access modifiers are present               6) not present
+
+     
+eg: code
+
+ #include<iostream>       // input and output stream
+ using namespace std;  
+ int main()                  // without int main generates error
+ {
+   int x;
+   cout<<"enter the x value"<<endl;
+   cin>>x<<endl;
+   cout<<x<<endl;
+}
+
+ ">>"  this is excretion operator.
+ "<<"  this is insertion operator.
+ 
+ "endl"  this is for next line.
+
+Scope resolution operator:
+----------------------------
+uses:-
+      
+   1)To access the global variables when local variable with same name.
+   2)To define the function outside of a class.
+   3)To access the class static variables.
+   4)In case of multiple inheritance.
+
+
+eg:
+ 1)#include<iostream>                           2)#include<iostream>                                          3)#include<iostream>
+  using namespace std;                             using namespace std;                                          using namespace std;
+  int n=90;                                        class test               // test is class name                class test
+  int main()                                       {                                                             {
+  {                                                     int num;                                                   int num;
+     int n=10;                                            public:                                                   static void display()
+    cout<<n<<endl;    // prints 10                        void show();                                              {
+    cout<<::n<<endl;  // prints 90                  };                                                                cout<<"hi"<<endl;
+  }                                              void test::show()            // defining out side the class        }
+                                                 {                                                               };
+                                                    cout<<"hello"<<endl;                                        int main()
+                                                 }                                                              {
+                                                 int main()                                                                 test::display();  // prints hi
+                                                 {                                                               }
+                                                     test t;   // t is object of class test
+                                                   t.show();   // function calling with object
+                                                 }
+
+
+Namespace:
+------------
+It is a feature in c++ that allows you to group related identifiers (like classes, functions, variables etc)under a common name to avoid naming conflicts.
+-> It prevents naming clashes in large projects. 
+
+Features of c++:   
+-----------------
+a)Encapsulation
+b)data abstraction
+c)polymorphism
+d)Inheritance
+
+
+a)Encapsulation :-
+---------
+wrapping up of data and functions in to single unit is called Encapsulation.
+
+Advantage :Data security.
 
