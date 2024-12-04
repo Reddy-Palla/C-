@@ -92,6 +92,99 @@ Namespace:
 It is a feature in c++ that allows you to group related identifiers (like classes, functions, variables etc)under a common name to avoid naming conflicts.
 -> It prevents naming clashes in large projects. 
 
+Refernece:
+-------------
+It is used to provide alias /duplicate name for existing variables.
+syntax:-   datatype &new_name=existing_name
+
+Rules:- 1) Reference variable must be initialized at the time of declaration.
+        2)Separate memory will not be created.
+        3)Null reference will not be possible. 
+        4)In it's life time reference variable cannot refer to another variable.
+        5)Reference variable will deference automatically.
+        6)Not for constant value  .->  
+                                      int &rv=100; (invalid) 
+                                     const int &rv=100;  (valid)
+
+        7) one variable can have multiple references.
+        8) reference to reference is not possible.
+        9) pointer to reference is not possible.
+
+
+Passing arguments to a function:
+---------------------------------
+1)call by value:
+----------------- 
+                 A copy of actual arguments is passed to formal arguments of the called function and any change made to formal arguments have no affect in actual arguments.
+        eg:  void swap(int a,int b)
+             {
+                int t;
+                t=a,a=b,b=t;
+              }
+              int main()
+              {
+                int x=10,y=20;
+                swap(x,y);
+                cout<<x<<" "<<y<<endl;   // output is 10,20
+               }
+
+2)Call by address:
+-----------------
+                The address of  arguments is passed to formal arguments of the called function and any change made to formal arguments  affects in actual arguments.
+        eg:  void swap(int *a,int *b)
+             {
+                int t;
+                t=a,a=b,b=t;
+              }
+              int main()
+              {
+                int x=10,y=20;
+                swap(&x,&y);
+                cout<<x<<" "<<y<<endl;   // output is 20,10
+               }
+
+3)Call by reference:
+---------------------
+                  Method of passing arguments to a function copies the reference of an argument in to the formal parameter inside the function, the refence is used to access to actual arguments used in call.any change made to formal arguments  affects in actual arguments
+           eg:  void swap(int &a,int &b)
+             {
+                int t;
+                t=a,a=b,b=t;
+              }
+              int main()
+              {
+                int x=10,y=20;
+                swap(x,y);
+                cout<<x<<" "<<y<<endl;   // output is 20,10
+               }
+
+* New operator:
+------------------
+For dynamic memory allocation
+->Automatically finds the size.
+->returns exact pointer.
+->No need typecasting.
+
+
+syntax: new datatype(variable)
+        new datatype[size](array)
+
+* Free:
+-----------
+For deallocating the momory.
+
+
+          Malloc                                   New
+         ---------                              ------------ 
+ 1)library function                            1) operator
+ 2)needs library                               2)no need
+ 3)sizeof operator required                    3)no need
+ 4)upon success results void                   4)exact pointer
+ 5)failure 0                                   5)throws execption
+ 6)memory initialization not possible          6)possible
+ 7)overloading not possible                    7)possible
+
+
 Features of c++:   
 -----------------
 a)Encapsulation
@@ -105,4 +198,3 @@ a)Encapsulation :-
 wrapping up of data and functions in to single unit is called Encapsulation.
 
 Advantage :Data security.
-
