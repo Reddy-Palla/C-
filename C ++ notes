@@ -1,4 +1,4 @@
-C++
+ C++
 ------------
 -> c++ is an extension and implementation of new features in c language
 -> It is object-oriented programming language. because it organizes code into objects, which are modules that contains code and functions .
@@ -20,11 +20,11 @@ It is the period of time when a program is running and generally occurs after co
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 
-Class:  It is a blueprint that defines the variables and methods.  
+Class:  It is a blueprint that defines the variables and methods. (size of empty class is 1 byte). 
 
 Object: It is instance (or) physical existance of a class (or ) real world entity of a class.
 
-Member functions : functions inside the class are called as member functions.
+Member functions : functions inside the class are called as member functions.(every member function must be called by object).
 
 ----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
@@ -132,7 +132,7 @@ namespace SBI
 }
 namespace AXIS
 {
-  intaccno=567;
+  int accno=567;
    void welcome_note()
     {
       cout<<"welcome to  AXIS"<<endl;
@@ -253,7 +253,7 @@ Passing arguments to a function:
 
 3)Call by reference:
 ---------------------
-                  Method of passing arguments to a function copies the reference of an argument in to the formal parameter inside the function, the refence is used to access to actual arguments used in call.any change made to formal arguments  affects in actual arguments
+                  Method of passing arguments to a function ,copies the reference of an argument in to the formal parameter inside the function, the refence is used to access to actual arguments used in call.any change made to formal arguments  affects in actual arguments
            eg:  void swap(int &a,int &b)
              {
                 int t;
@@ -319,7 +319,70 @@ delete []p;
    string *p;
   p=new string [5];
 
+* Inline functions:-
+--------------------------
+It is a function where function call is replaced with the function defination.
+syntax->   inline return_type fun_name(arguments);
 
+restrictions:-
+-----
+1)It will not work if function is recursive.
+2)control statements are not allowed.
+3)static variables are not allowed.
+4)return keyword not allowed.
+
+eg:
+   #include<iostream>
+   using namespace std;
+   inline void test()
+   {
+    cout<<"test"<<endl;
+  }
+ int main()
+ {
+  test();
+ }
+
+
+Q) Recursions is used in inline functions and if used what will happen?
+A) No, recursions will not use
+   if we use -> inline functions are expanded at compile time and recursion invloves repeated  function calls.
+This could result in infinte inline expanisons,leading to compliation errors (or) exessive memory usage.
+
+Q) can inline functions used in recurisons and if used what will happen?
+A) It is technically allowed but it is genrally considered as wrong practise, compilers will typically ignore the inline directive
+ for recursive calls to avoid infinte exapnsions (or) excessive memory usage.
+
+
+  Macro                                 inline
+-------                                 --------
+1) it is one instruction and           1)function call replace with function 
+ it expands the code with multiple            defination.
+ instructions
+2)It's mandatory to replace            2)it request compiler if possible to replace
+3)expanded by processor                3)these are done by compiler
+4)n no.of instructions                 4) not morethan 2
+5)keyword-> #define                    5)keyword-> inline.
+
+
+C structure                                    c++ structure
+--------------                            ----------------------- 
+1)empty structure size is 0 bytes        1) empty structure size is 1 byte.(for showing variable existance) 
+2)collection of only data members        2) data members and member functions.
+3)access specifiers are not presnet      3) present here.
+
+c++ structure                              c++ class
+--------------                           -----------------
+1) By default members are public         1) by default members are private
+2) by birth properties of structure      2) by birth private.
+  are public.
+3)default mode of inheritance is         3) by default mode of inheritance is private.
+ public.
+
+*This pointer:
+-----------------
+whenever a member function is called,this pointer is automatically passed to called member function implictly
+-> this pointer is used to access tha object data members and member function.( it will tell that this object belogs to this class)
 
 Features of c++:   
 -----------------
