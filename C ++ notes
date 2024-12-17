@@ -382,7 +382,7 @@ c++ structure                              c++ class
 *This pointer:
 -----------------
 whenever a member function is called,this pointer is automatically passed to called member function implictly
--> this pointer is used to access tha object data members and member function.( it will tell that this object belogs to this class)
+-> this pointer is used to access the object data members and member function.( it will tell that this object belogs to this class)
 
 Features of c++:   
 -----------------
