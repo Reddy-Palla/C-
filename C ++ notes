@@ -33,7 +33,7 @@ Member functions : functions inside the class are called as member functions.(ev
          c                                          c++
       --------                                    --------
  1) Procedural oriented                        1) Object oriented
- 2) Data is secured                           2) Secured
+ 2) Data is not secured                        2) Secured
  3) Access specifiers are not present         3) are present
  4)not strict type check                      4)  strict type check
  5) function driven                           5) object driven
@@ -195,7 +195,7 @@ int main()                                                         using namespa
                                                                                
 }                                       welcome_note();                      welcome_note();
                                      }                                     }
-output-: error                    output -:1234(always from SBI )                      output -:error
+output-: no error                    output -:1234(always from SBI )                      output -:error
                                         welcome to AXIS(always from AXIS)
 
 
@@ -209,7 +209,7 @@ Rules:- 1) Reference variable must be initialized at the time of declaration.
         2)Separate memory will not be created.
         3)Null reference will not be possible. 
         4)In it's life time reference variable cannot refer to another variable.
-        5)Reference variable will deference automatically.
+        5)Reference variable will derefernce automatically.
         6)Not for constant value  .->  
                                       int &rv=100; (invalid) 
                                      const int &rv=100;  (valid)
